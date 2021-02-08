@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Infinity Bot</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="/share/jquery-3.2.1.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="stylesheet" href="/share/bootstrap.min.css">
+		<link rel="stylesheet" href="/share/WebChatAPI/chat.css">
+		<script src="/share/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container-fluid">
+				<div>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/">Infinity Bot</a>
+					</div>
+                    <div class="collapse navbar-collapse" id="navBar">
+                        <ul class="nav navbar-nav">
+                            {{{navbar}}}
+                            <li class="float-right">
+                                {{#if signedIn}}
+                                    <a href="/logout">Hello {{displayName}}</a>
+                                {{else}}
+                                    <a href="/auth/google">SIGN IN</a>
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</nav>
+		{{{body}}}
+	</body>
+</html>
